@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="height: 100vh; overflow: hidden">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" style="margin-left: 2.1vw !important;" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+                <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+              </svg>
+              <h4 class="m-0 ms-2">Doc Flow Admin</h4>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 me-5">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Username
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+    <main style="height:85%;">
+      <div class="container-fluid d-flex flex-column" style="height: 100%;">
+        <div class="d-flex flex-row" style="margin: 10px;height: 100%;">
+          <div class="file-list w-50 d-flex flex-column" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+              </svg>
+              <h5 class="m-0 ms-2">Users</h5>
+            </div>
+            <div class="mt-1 p-3 mb-3" style="overflow-y: scroll">
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 1</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 2</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 3</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 4</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 5</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">User 6</div>
+                  </div>
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-dark me-3">Unblock</button>
+                    <button type="button" class="btn btn-danger">Block</button>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="doc-flow w-50 d-flex flex-column" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-arrow-up" viewBox="0 0 16 16">
+                <path d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>
+              <h5 class="m-0 ms-2">Doc flow</h5>
+            </div>
+            <div class="mt-1 p-3 mb-3" style="overflow-y: scroll">
+             <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 1</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 2</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 3</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 4</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 5</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 6</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="height: 8%;">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%; text-align: center;">
+        <span>Copyright © 2022 All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

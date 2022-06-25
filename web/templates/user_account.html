@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="height: 100vh; overflow: hidden">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" style="margin-left: 2.1vw !important;" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+                <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+              </svg>
+              <h4 class="m-0 ms-2">Doc Flow Account</h4>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 me-5">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Username
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+    <main style="height:85%;">
+      <div class="container-fluid d-flex flex-column" style="height: 100%;">
+        <div class="d-flex flex-row" style="margin: 10px;height: 50%;">
+          <div class="file-list w-50 d-flex flex-column" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-check" viewBox="0 0 16 16">
+                <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>
+              <h5 class="m-0 ms-2">File list</h5>
+            </div>
+            <div class="mt-1 p-3 mb-3" style="overflow-y: scroll">
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 1</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 2</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 3</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 4</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 5</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 6</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="doc-flow w-50 d-flex flex-column" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-arrow-up" viewBox="0 0 16 16">
+                <path d="M8.5 11.5a.5.5 0 0 1-1 0V7.707L6.354 8.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 7.707V11.5z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>
+              <h5 class="m-0 ms-2">Doc flow</h5>
+            </div>
+            <div class="mt-1 p-3 mb-3" style="overflow-y: scroll">
+             <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 1</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 2</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 3</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 4</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 5</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Doc 6</div>
+                    Hash: 2cf24dba5fb0a30e26e83b2ac5b9e \ Signature: 2cf24dba5fb0a30e26e83b2ac5b9e
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-row" style="margin: 10px;height: 50%;">
+          <div class="sign-file w-50" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-lock" viewBox="0 0 16 16">
+                <path d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0zM7 7v1h2V7a1 1 0 0 0-2 0zM6 9.3v2.4c0 .042.02.107.105.175A.637.637 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.637.637 0 0 0 9.5 9h-3a.637.637 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>
+              <h5 class="m-0 ms-2">Sign file</h5>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 80%;">
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">File hash</span>
+                    <input type="text" class="form-control" placeholder="2cf24dba5fb0a30e26e83b2ac5b9e" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <button type="button" class="btn ms-3" style="height: 100%; background-color: #e9ecef">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Signature</span>
+                    <input type="text" class="form-control" placeholder="2cf24dba5fb0a30e26e83b2ac5b9e" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <button type="button" class="btn ms-3" style="height: 100%; background-color: #e9ecef">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                  </button>
+                </div>
+                <button type="button" class="btn btn-dark">Upload</button>
+              </div>
+            </div>
+          </div>
+          <div class="check-sign-file w-50" style="background: #f8f9fa;height: 100%;border: 1px solid transparent;border-radius: 8px; margin: 10px;">
+            <div class="d-flex flex-row align-items-center ms-3 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-break" viewBox="0 0 16 16">
+                <path d="M14 4.5V9h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v7H2V2a2 2 0 0 1 2-2h5.5L14 4.5zM13 12h1v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2h1v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2zM.5 10a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5z"/>
+              </svg>
+              <h5 class="m-0 ms-2">Check sign file</h5>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 80%;">
+              <div class="d-flex flex-column">
+                <div class="d-flex flex-row">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">File hash</span>
+                    <input type="text" class="form-control" placeholder="2cf24dba5fb0a30e26e83b2ac5b9e" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <button type="button" class="btn ms-3" style="height: 100%; background-color: #e9ecef">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="d-flex flex-row">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Signature</span>
+                    <input type="text" class="form-control" placeholder="2cf24dba5fb0a30e26e83b2ac5b9e" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <button type="button" class="btn ms-3" style="height: 100%; background-color: #e9ecef">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                      <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                      <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                  <button type="button" class="btn btn-dark" style="width: 48%;">Upload</button>
+                  <button type="button" class="btn btn-dark" style="width: 48%;">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="height: 8%;">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%; text-align: center;">
+        <span>Copyright © 2022 All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

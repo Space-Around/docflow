@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="height: 100vh; overflow: hidden">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" style="margin-left: 2.1vw !important;" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+                <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+              </svg>
+              <h4 class="m-0 ms-2">Doc Flow</h4>
+            </a>
+          </div>
+      </nav>
+    </header>
+    <main style="height:85%;">
+      <div class="container-fluid d-flex flex-column" style="height: 100%;">
+        <div class="d-flex justify-content-center align-items-center" style="height: 80%;">
+          <div class="d-flex flex-column">
+            <div class="d-flex flex-row">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Username</span>
+                <input type="text" class="form-control username-input" placeholder="Ivanov" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Password</span>
+                <input type="text" class="form-control password-input" placeholder="1234" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+              <button type="button" class="btn btn-light sign-up-btn" style="width: 48%;">Sign Up</button>
+              <button type="button" class="btn btn-dark sign-in-btn" style="width: 48%;">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer style="height: 8%;">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%; text-align: center;">
+        <span>Copyright © 2022 All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        let signUpBtn = document.querySelector('.sign-up-btn'),
+            signInBtn = document.querySelector('.sign-in-btn');
+
+        signUpBtn.onclick = (e) => {
+          let username = document.querySelector('.username-input').value,
+            password = document.querySelector('.password-input').value;
+
+          $.ajax({
+            url: 'http://127.0.0.1:5100/signup',
+            dataType: "json",
+            method: "POST",
+            data: {"username": "test", "password": "1234"},
+            success: function(data) {
+              console.log(data.hasOwnProperty('info'));
+              // if (data.hasOwnProperty('info') && data.info == 'Success') {
+              //   console.log()
+              // }
+            }
+          });
+        };
+
+        signInBtn.onclick = (e) => {
+          let username = document.querySelector('.username-input').value,
+            password = document.querySelector('.password-input').value;
+
+          $.ajax({
+            url: 'http://127.0.0.1:5100/signin',
+            method: "POST",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({"username": "test", "password": "1234"}),
+            success: function(data) {
+              if (data.hasOwnProperty('info') && data.info == 'Success') {
+                if (data.role == 'user') {
+                  window.location.replace("http://127.0.0.1:5200/account/user");
+                }
+                if (data.role == 'admin') {
+                  window.location.replace("http://127.0.0.1:5200/account/admin");
+                }
+              }
+            }
+          });
+        };
+      });
+    </script>
+  </body>
+</html>
