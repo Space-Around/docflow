@@ -1,4 +1,15 @@
-# import ipfsapi
-# api = ipfsapi.connect('127.0.0.1', 8080)
 import ipfshttpclient
-client = ipfshttpclient.connect('/dns/127.0.0.1/tcp/5001/http')
+import json
+
+client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+
+json_data = {
+    'hello': 'world',
+    'count': 12
+}
+
+# res = client.add('test_ipfs.py')
+
+# res = client.add_json(json.dumps(json_data))
+
+# print(res)

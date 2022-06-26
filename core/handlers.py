@@ -1,11 +1,11 @@
+import config
 import errors
-import services
 import consts
 import storages
+import services
 from utils import SessionUtils, UserUtils
-import config
-import os
 
+import os
 from fastapi.responses import JSONResponse
 
 
@@ -113,11 +113,10 @@ async def sign_file_handler(file, token):
             'signature': signature
         }
 
-        
+        hash = storages.IPFS.add(json_data)
 
-        # contract = storages.deploy_contract()
-
-
+        blockchain = storages.Blockchain()
+        blockchain.add(hash)
 
         os.remove(f'{config.TMP_PATH_DEFAULT}/{file.filename}')
 
