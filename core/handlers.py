@@ -3,7 +3,7 @@ import errors
 import consts
 import storages
 import services
-from utils import SessionUtils, UserUtils
+from utils import SessionUtils, UserUtils, IPFSUtils, SearchUtils
 
 import os
 from fastapi.responses import JSONResponse
@@ -199,8 +199,41 @@ def manage_user_non_block_handler():
     pass
 
 
-def doc_scan_list_handler():
-    pass
+def doc_scan_list_handler(token):
+    try:
+        username = SessionUtils.get_username(token=token)
+
+        if UserUtils.is_block(username=username):
+            content = {'error': consts.USER_BLOCK_RESPONSE}
+            response = JSONResponse(content=content)
+            return response
+
+        blockchain = storages.Blockchain()
+        txs_uri = blockchain.match_txs_uri()
+        extended_info_list = IPFSUtils.extend_info_by_uri(txs_uri)
+
+        extended_info_list = SearchUtils.filter_by_user(
+            extended_info_list=extended_info_list,
+            username=username
+        )
+
+        token = SessionUtils.update_token(token=token)
+
+        content = {'info': consts.RESPONSE_SUCCESS, 'list': extended_info_list}
+        response = JSONResponse(content=content)
+        response.set_cookie(key='token', value=token)
+    except errors.TokenNotExistError as e:
+        content = {'error': e}
+        response = JSONResponse(content=content)
+    except errors.TokenNotCreatedError as e:
+        content = {'error': e}
+        response = JSONResponse(content=content)
+    except errors.TokenExpireError as e:
+        content = {'error': e}
+        response = JSONResponse(content=content)
+
+    return response
+
 
 
 def doc_scan_search_handler():

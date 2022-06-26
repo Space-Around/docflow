@@ -14,4 +14,4 @@ class IPFS:
     @classmethod
     def cat(cls, hash):
         with ipfshttpclient.connect(config.IPFS_ADRR) as client:
-            client.cat(hash)
+            return client.cat(hash)

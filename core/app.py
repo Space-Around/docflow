@@ -2,7 +2,7 @@ import traceback
 
 import config
 import handlers
-from storages import StorageORM, User, Session
+from storages import StorageORM, User, Session, Blockchain
 
 import uvicorn
 from fastapi import FastAPI, Request, Cookie, UploadFile, Form, File
@@ -93,9 +93,8 @@ async def manage_user_non_block(request: Request):
 
 
 @app.get('/doc/scan/list')
-async def doc_scan_list():
-    content = handlers.doc_scan_list_handler()
-    response = JSONResponse(content=content)
+async def doc_scan_list(token=Cookie(None)):
+    response = handlers.doc_scan_list_handler(token)
     return response
 
 

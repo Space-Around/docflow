@@ -10,6 +10,8 @@ json_data = {
 
 # res = client.add('test_ipfs.py')
 
-# res = client.add_json(json.dumps(json_data))
+res = client.add_json(json.dumps(json_data))
+
+print(client.cat(res))
 
 # print(res)

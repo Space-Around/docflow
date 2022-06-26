@@ -18,5 +18,5 @@ df = blockchain_project.DocFlow.deploy({'from': accounts[0]})
 df.add(accounts[1], 'https://0.0.0.0:8080/data/doc1.json')
 
 # print(chain[12])
-print(history.copy())
+# print(history.copy())
 
